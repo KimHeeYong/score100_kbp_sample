@@ -5,6 +5,8 @@ metadata:
     app: frontend
   name: frontend
   namespace: k8s-example
+  annotations:
+    service.beta.kubernetes.io/azure-load-balancer-internal: "true"
 spec:
   ports:
   - port: 8080

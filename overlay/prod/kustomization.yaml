@@ -1,3 +1,4 @@
+namespace: kbp-prod
 bases:
   - ../../base
 

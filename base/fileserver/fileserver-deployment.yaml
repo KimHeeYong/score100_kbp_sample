@@ -2,23 +2,23 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: fileserver
-  name: fileserver
+    app: my-nginx 
+  name: my-nginx
   namespace: k8s-example
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: fileserver
+      app: my-nginx
   template:
     metadata:
       labels:
-        app: fileserver
+        app: my-nginx
     spec:
       containers:
-      - image: brendanburns/journal-server:latest
+      - image: nginx
         imagePullPolicy: Always
-        name: fileserver
+        name: my-nginx
         terminationMessagePath: /dev/termination-log
         terminationMessagePolicy: File
         resources:

@@ -1,12 +1,16 @@
 resources:
-  - frontend/deployment.yaml
-  - frontend/service.yaml
-  - frontend/ingress.yaml
+        #  - frontend/frontend-config.yaml
+
+        # - redis/redis-configmap.yaml
+        #  - redis/redis-secret.yaml
+  - frontend/frontend-deployment.yaml
+  - frontend/frontend-service.yaml
+  - frontend/frontend-ingress.yaml
   - redis/redis-pod.yaml
   - redis/redis-data-read-service.yaml
   - redis/redis-data-write-service.yaml
-  - fileserver/fileserver-deployment.yaml
-  - fileserver/fileserver-service.yaml
+    #  - fileserver/fileserver-deployment.yaml
+    # - fileserver/fileserver-service.yaml
 
 commonLabels:
   owner: kimheeyong

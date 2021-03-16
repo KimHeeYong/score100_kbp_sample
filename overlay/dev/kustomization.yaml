@@ -1,4 +1,5 @@
+#namespace: kbp-dev 
 bases:
   - ../../base
 
-namePrefix: dev-
+    #namePrefix: dev-

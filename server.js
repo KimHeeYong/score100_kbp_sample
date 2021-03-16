@@ -2,7 +2,8 @@ const http = require('http');
 const redis = require('redis');
 
 const client = redis.createClient({
-    'host': '127.0.0.1'
+     host : process.env.REDIS_SERVICE_HOST,
+     auth_pass: '1234'
 });
 
 const port = 8080;
